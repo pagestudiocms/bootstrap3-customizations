@@ -1,0 +1,130 @@
+
+a, a.current, a.active, a:active {
+  outline: 0 !important;
+}
+
+code,
+.code {
+  color: #E74C3C;
+  border-radius: 1px;
+  background: #fff;
+  border: solid 1px #e1e4e5;
+}
+
+hr {
+  &.small {
+    border-top: 4px solid #FFF;
+    max-width: 40px;
+  }
+}
+
+//
+// Text
+// --------------------------------------------------
+
+// Headings 
+// -------------------------
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  // margin-top: $line-height-computed;
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+
+  small,
+  .small { 
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+// Type display classes
+// ------------------------- 
+.display-1 {
+  @include font-size($display1-size);
+  font-weight: $display1-weight;
+  line-height: $display-line-height;
+}
+.display-2 {
+  @include font-size($display2-size);
+  font-weight: $display2-weight;
+  line-height: $display-line-height;
+}
+.display-3 {
+  @include font-size($display3-size);
+  font-weight: $display3-weight;
+  line-height: $display-line-height;
+}
+.display-4 {
+  @include font-size($display4-size);
+  font-weight: $display4-weight;
+  line-height: $display-line-height;
+}
+
+// Alignment
+// -------------------------
+
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { @include text-truncate; }
+
+// Responsive alignment
+
+// 
+// TODO: Import from bootstrap 4
+// @each $breakpoint in map-keys($grid-breakpoints) {
+//   @include media-breakpoint-up($breakpoint) {
+//     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+// 
+//     .text#{$infix}-left   { text-align: left !important; }
+//     .text#{$infix}-right  { text-align: right !important; }
+//     .text#{$infix}-center { text-align: center !important; }
+//   }
+// }
+
+
+// Transformation
+// -------------------------
+
+.text-lowercase  { text-transform: lowercase !important; }
+.text-uppercase  { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Weight and italics
+// -------------------------
+
+.font-weight-light  { font-weight: $font-weight-light !important; }
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+.font-weight-bold   { font-weight: $font-weight-bold !important; }
+.font-italic        { font-style: italic !important; }
+
+// Contextual colors
+// -------------------------
+
+.text-white { color: #fff !important; }
+
+//
+// TODO: Import from Bootstrap 4
+// @each $color, $value in $theme-colors {
+//   @include text-emphasis-variant(".text-#{$color}", $value);
+// }
+
+.text-muted { color: $text-muted !important; }
+
+// Misc
+// -------------------------
+
+.text-hide {
+  @include text-hide();
+}

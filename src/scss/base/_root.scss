@@ -1,0 +1,51 @@
+:root {
+    /* Bootstrap 5 variables for Bootstrap 3 */
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    
+    --bs-primary: #ff0000;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-gray-darker: #{$gray-darker};
+    --bs-gray-dark: #{$gray-dark};
+    --bs-gray: #{$gray};
+    --bs-gray-light: #{$gray-light};
+    --bs-gray-lighter: #{$gray-lighter};
+
+    // --bs-font-sans-serif: #{meta.inspect($font-family-sans-serif)};
+    // --bs-font-serif: #{meta.inspect($font-family-serif)};
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    
+    /* Custom colors */
+    --bs-primary-dark: #ce0000;
+    --default-gray: #e0e0e0;
+    --dark-gray: #46474a;
+    --default-text-color: #e0e0e0;
+    --default-border-color: #5c5c5c;
+    --default-box-shadow: rgba(0, 0, 0, .80);
+    --bg-transparent-color: rgba(0, 0, 0, .55);
+    --headings-color: var(--bs-primary);
+    --link-color: var(--bs-primary);
+}
+
+// @include text-selection-color($black-medium);
+
+// body {
+  
+// }

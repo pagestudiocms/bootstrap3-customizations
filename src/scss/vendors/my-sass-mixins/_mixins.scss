@@ -1,0 +1,134 @@
+// --------------------------------------------------------------
+// Font Selections
+// --------------------------------------------------------------
+@mixin body-font($font-sans-serif) {
+  font-family: $font-sans-serif;
+}
+
+@mixin heading-font($font-sans-serif) {
+  font-family: $font-sans-serif;
+  text-transform: uppercase;
+}
+
+@mixin script-font($font-serif) {
+  font-family: $font-serif;
+}
+
+@mixin serif-font($font-sans-serif) {
+  font-family: $font-sans-serif;
+}
+
+// --------------------------------------------------------------
+// Background mixins
+// --------------------------------------------------------------
+
+// Background color with rgba conversion 
+@mixin background-color($color, $opacity: 100) { 
+    background: $color; // The Fallback
+    background: rgba($color, $opacity);
+}
+
+// Gives you a full screen background 
+@mixin background-fullsize($image, $color:transparent) {
+    background: $color url($image) center/cover no-repeat; 
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+// Gives you a background that stretches full-width
+@mixin background-stretched($image) {    
+    background-attachment: scroll;
+    background-image: url($image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+// Placeholder 
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+// --------------------------------------------------------------
+// Text Selection 
+// @usage: @include selection { ${rule}: ${value} }
+// --------------------------------------------------------------
+@mixin selection {
+	& ::selection {
+		@content;
+	}
+	& ::-moz-selection {
+		@content;
+	}
+}
+
+// --------------------------------------------------------------
+// Selection background & text color 
+// --------------------------------------------------------------
+@mixin text-selection-color($bg-color: #ffb7b7, $text-color: #FFFFFF) {
+  ::selection {
+      color: $text-color;
+      background: $bg-color; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+      color: $text-color;
+      background: $bg-color; /* Gecko Browsers */
+  }
+} 
+
+// --------------------------------------------------------------
+// Utility Mixins
+// --------------------------------------------------------------
+/* Clearfix Usage
+  .container-with-floated-children {
+    @extend %clearfix;
+  }
+*/
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Visually hide an element
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

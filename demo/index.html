@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Bootstrap3 Migration</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&amp;display=swap" rel="stylesheet"
+        type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Crimson+Text&amp;display=swap:400,700,500,400italic,500italic,700italic"
+        rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="https://cdn.pagestudiocms.com/assets/vendors/bootstrap-offcanvas/css/bootstrap.offcanvas.min.css">
+    <link rel="stylesheet" href="../build/assets/css/bootstrap-custom.css">
+    <!-- <link rel="stylesheet" href="../build/assets/css/bootstrap-theme.css"> -->
+    <link rel="stylesheet" href="../build/assets/css/docs.min.css">
+
+    <script type="text/javascript"
+        src="https://cdn.pagestudiocms.com/assets/vendors/modernizr/modernizr-2.6.2.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="bootstrap-offcanvas bs-docs-home">
+
+    <!-- <div class="page-loader"></div> -->
+
+    <div id="page" class="site-container">
+
+        <nav id="primary-nav" class="navbar navbar-default navbar-fixed-top" role="navigation" data-content-field="header-content"
+    data-navbar-type="offcanvas">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">
+                <!-- <img src="images/logo.png" class="site-logo-image" alt="Circle Studio"> -->
+                <!-- <span class="hidden site-slogan"></span> -->
+                <span>Bootstrap 3</span> Custom
+            </a>
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-overlay-one" data-target-original="example-overlay-one"> -->
+            <button type="button" class="navbar-toggle offcanvas-toggle js-offcanvas-has-events"
+                data-toggle="offcanvas" data-target="#example-offcanvas-three"
+                data-target-original="#example-offcanvas-three">
+                <span class="sr-only">Toggle navigation</span>
+                <span>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-offcanvas navbar-offcanvas-touch offcanvas-transform js-offcanvas-done"
+            id="example-offcanvas-three">
+            <!-- <div class="collapse navbar-collapse" id="example-overlay-one"> -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="first"><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li class="last"><a href="components-old.html">Old Components</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+<!-- {% include nav/main.html %} -->
+
+<div class="bs-docs-header" id="content" tabindex="-1" style="margin-top: 50px;">
+    <div class="container">
+        <h1>Overview</h1>
+        <p>A quick preview of everything the template has to offer.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+    <h1 id="colors" class="page-header">Colors</h1>
+
+    <h2 id="global-color">Global</h2>
+    <p>More info coming soon...</p>
+    <div class="bs-example" data-example-id="inline-code">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="pallete-items">
+                    
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-primary">
+                            <dt>Primary</dt>
+                            <dd>#267df4</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-primary-dark"> 
+                            <dt>Primary Dark</dt>
+                            <dd>#0c6cef</dd>
+                        </dl>
+                    </div>
+                    
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-secondary">
+                            <dt>Secondary</dt>
+                            <dd>#267df4</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-secondary-dark">
+                            <dt>Secondary Dark</dt>
+                            <dd>#0c6cef</dd>
+                        </dl>
+                    </div>
+
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-success">
+                            <dt>Success</dt>
+                            <dd>#669900</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-success-dark">
+                            <dt>Success Dark</dt>
+                            <dd>#5c8a00</dd>
+                        </dl>
+                    </div>
+
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-info">
+                            <dt>Info</dt>
+                            <dd>#558abb</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-info-dark">
+                            <dt>Info Dark</dt>
+                            <dd>#467db0</dd>
+                        </dl>
+                    </div>
+
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-warning">
+                            <dt>Warning</dt>
+                            <dd>#fcf8df</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-warning-dark">
+                            <dt>Warning Dark</dt>
+                            <dd>#f8eeb0</dd>
+                        </dl>
+                    </div>
+
+                    <div class="pallete-item">
+                        <dl class="palette palette-item-primary palette-danger">
+                            <dt>Danger</dt>
+                            <dd>#b0423f</dd>
+                        </dl>
+                        <dl class="palette palette-item-secondary palette-danger-dark">
+                            <dt>Danger Dark</dt>
+                            <dd>#a53e3b</dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- /row -->
+    </div>
+
+    <h2 id="global-color">Base</h2>
+    <p>More info coming soon...</p>
+    <div class="bs-example" data-example-id="inline-code">
+        <div class="row">
+            <div class="col-md-12 col-sm-8">
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-dark">
+                        <dt>Dark</dt>
+                        <dd>#000</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-light">
+                        <dt>Light</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="global-color">Greys</h2>
+    <p>More info coming soon...</p>
+    <div class="bs-example" data-example-id="inline-code">
+        <div class="row">
+            <div class="col-md-12 col-sm-8">
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray-darker">
+                        <dt>Gray Darker</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray-dark">
+                        <dt>Gray Dark</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray">
+                        <dt>Gray</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray-light">
+                        <dt>Gray Light</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray-lighter">
+                        <dt>Gray Lighter</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+                <div class="pallete-item pallete-joined">
+                    <dl class="palette palette-shade palette-gray-lightest">
+                        <dt>Gray Lightest</dt>
+                        <dd>#</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <div class="bs-docs-section">
+                <h1 id="typography" class="page-header">Typography</h1>
+            
+                <h2 id="headings">Headings</h2>
+<p>All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through <code
+        class="highlighter-rouge">&lt;h6&gt;</code>, are available.</p>
+<div class="bs-example" data-example-id="headings">
+    <h1>h1. Bootstrap heading</h1>
+    <h2>h2. Bootstrap heading</h2>
+    <h3>h3. Bootstrap heading</h3>
+    <h4>h4. Bootstrap heading</h4>
+    <h5>h5. Bootstrap heading</h5>
+    <h6>h6. Bootstrap heading</h6>
+</div>
+
+<h2 id="display-headings">Display Headings</h2>
+<p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to
+    stand out, consider using a display heading—a larger, slightly more opinionated heading style.</p>
+<div class="bs-example" data-example-id="display-headings">
+    <table class="table">
+        <tbody>
+          <tr>
+            <td><span class="display-1">Display 1</span></td>
+          </tr>
+          <tr>
+          <td><span class="display-2">Display 2</span></td>
+          </tr>
+          <tr>
+          <td><span class="display-3">Display 3</span></td>
+          </tr>
+          <tr>
+          <td><span class="display-4">Display 4</span></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 id="custom-headings">Customizing Headings</h2>
+<p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
+<div class="bs-example" data-example-id="custom-headings">
+    <h1>h1. Bootstrap heading, <small>with small text</small></h1>
+    <h2>h2. Bootstrap heading, <small>with small text</small></h2>
+    <h3>h3. Bootstrap heading, <small>with small text</small></h3>
+    <h4>h4. Bootstrap heading, <small>with small text</small></h4>
+    <h5>h5. Bootstrap heading, <small>with small text</small></h5>
+    <h6>h6. Bootstrap heading, <small>with small text</small></h6>
+</div>
+                
+                <h2 id="content-formatting">Content Formatting</h2>
+<p>Styling for common inline HTML5 elements.</p>
+<div class="bs-example" data-example-id="content-formatting">
+    <p class="lead">This is a lead paragraph.</p>
+    <p>This is an <b>ordinary paragraph</b> that is <i>long enough</i> 
+        to wrap to <u>multiple lines</u> so that you can see how the line spacing looks.</p>
+    
+    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+    <p><u>This line of text will render as underlined</u></p>
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+    <p><strong>This line rendered as bold text.</strong></p>
+    <p><em>This line rendered as italicized text.</em></p>
+    <p><small>This is text in a <code>small</code> wrapper. <abbr title="No Big Deal">NBD</abbr>, right?</small></p>
+
+    <h3>Text Utilities</h3>
+    <p class="text-muted">Muted color paragraph.</p>
+    <p class="text-warning">Warning color paragraph.</p>
+    <p class="text-danger">Danger color paragraph.</p>
+    <p class="text-info">Info color paragraph.</p>
+    <p class="text-success">Success color paragraph.</p>
+    <hr>
+    <address> <strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San
+        Francisco, CA
+        94107<br> <abbr title="Phone">P:</abbr> (123) 456-7890 </address>
+    <address class="col-6"> <strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a> </address>
+    <hr>
+    <blockquote>Here's what a blockquote looks like in Bootstrap. <small>Use
+            <code>small</code>
+            to identify the source.</small>
+    </blockquote>
+    <hr>
+    <div class="row">
+        <div class="col-xs-6">
+            <ul>
+                <li>Normal Unordered List</li>
+                <li>Can Also Work
+                    <ul>
+                        <li>With Nested Children</li>
+                    </ul>
+                </li>
+                <li>Adds Bullets to Page</li>
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <ol>
+                <li>Normal Ordered List</li>
+                <li>Can Also Work
+                    <ol>
+                        <li>With Nested Children</li>
+                    </ol>
+                </li>
+                <li>Adds Bullets to Page</li>
+            </ol>
+        </div>
+    </div>
+    <hr>
+    <pre>function preFormatting() {  // looks like this;  var something = somethingElse;  return true;}</pre>
+</div>
+            </div>
+        </div>
+        <!-- {% unless page.fullwidth == true %} -->
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+    <a href="#colors">Colors</a>
+    <ul class="nav">
+        <li><a href="#overview-doctype">HTML5 doctype</a></li>
+        <li><a href="#overview-mobile">Mobile first</a></li>
+        <li><a href="#overview-type-links">Typography and links</a></li>
+    </ul>
+</li>
+<li>
+    <a href="#grid">Grid system</a>
+    <ul class="nav">
+        <li><a href="#grid-intro">Introduction</a></li>
+        <li><a href="#grid-media-queries">Media queries</a></li>
+        <li><a href="#grid-options">Grid options</a></li>
+        <li><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
+        <li><a href="#grid-example-fluid">Ex: Fluid container</a></li>
+        <li><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li>
+        <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
+        <li><a href="#grid-example-wrapping">Ex: Column wrapping</a></li>
+        <li><a href="#grid-responsive-resets">Responsive column resets</a></li>
+        <li><a href="#grid-remove-gutters">Remove gutters</a></li>
+        <li><a href="#grid-offsetting">Offsetting columns</a></li>
+        <li><a href="#grid-nesting">Nesting columns</a></li>
+        <li><a href="#grid-column-ordering">Column ordering</a></li>
+        <li><a href="#grid-less">Less mixins and variables</a></li>
+    </ul>
+</li>
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
+        <!-- {% endunless %} -->
+    </div>
+</div>
+
+<!-- </div> -->
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer">
+    <div class="container">
+  
+      <ul class="bs-docs-footer-links">
+        <li><a href="{{ site.repo }}">GitHub</a></li>
+        <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+        <li><a href="{{ site.baseurl }}/getting-started/#examples">Examples</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+      </ul>
+  
+      <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" rel="noopener" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" rel="noopener" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+  
+      <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" rel="license noopener" target="_blank">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" rel="license noopener" target="_blank">CC BY 3.0</a>.</p>
+  
+    </div>
+</footer>
+
+<!-- JavaScript
+================================================================= -->
+
+<script src="http://cdn.pagestudiocms.com/assets/vendors/jquery/jquery-1.12.1.min.js"></script>
+<script src="http://cdn.pagestudiocms.com/assets/vendors/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- <script src="http://cdn.pagestudiocms.com/assets/vendors/bootstrap-offcanvas/js/bootstrap.offcanvas.min.js"></script> -->
+<script src="../../build/assets/js/docs.min.js"></script>
+<script src="../../build/assets/js/application.js"></script>
+<!-- jQuery Easing -->
+<!-- <script src="../../assets/js/jquery.easing.1.3.js"></script> -->
+
+<script src="http://cdn.pagestudiocms.com/assets/vendors/stellar/0.6.2/jquery.stellar.min.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/checkbox.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/radio.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/bootstrap-switch.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/switch.js"></script>
+<script type="text/javascript" src="../build/assets/js/site.js"></script>
+<!-- <script src="src/js/main.js" type="module"></script> -->
+
+</body>
+
+</html>

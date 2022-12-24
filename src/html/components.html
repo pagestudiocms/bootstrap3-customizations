@@ -1,0 +1,40 @@
+${require('./_header.html') title="Bootstrap3 Migration" 
+    navbar="navbar-default navbar-fixed-top" 
+    body-class="bs-docs-home"
+}
+
+<!-- {% include nav/main.html %} -->
+
+<div class="bs-docs-header" id="content" tabindex="-1" style="margin-top: 50px;">
+    <div class="container">
+        <h1>Components</h1>
+        <p>Bootstrap 3 components made to look like Bootstrap 4.</p>
+        <p>Features over a dozen reusable components built to provide dropdowns, input groups, navigation, alerts, and much more</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-sectio">
+            
+                ${require('./_partials/components/_all.html')}
+                
+            </div>
+        </div>
+        <!-- {% unless page.fullwidth == true %} -->
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+                    ${require('./_partials/components/_sidenav.html')}
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
+        <!-- {% endunless %} -->
+    </div>
+</div>
+
+${require('./_footer.html')}
