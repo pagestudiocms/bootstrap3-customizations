@@ -1,0 +1,38 @@
+${require('./_header.html') title="Overview" 
+    navbar="navbar-default navbar-fixed-top" 
+    body-class="bs-docs-home"
+}
+
+{% include nav/main.html %}
+
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>Overview</h1>
+        <p>A quick preview of everything the template has to offer.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+    <div class="row">
+        <div class="col-md-9" role="main">
+            
+            ${require('./_partials/overview/_colors.html')}
+            
+        </div>
+        <!-- {% unless page.fullwidth == true %} -->
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav">
+                    ${require('./_partials/overview/_sidenav.html')}
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
+        <!-- {% endunless %} -->
+    </div>
+</div>
+
+${require('./_footer.html')}

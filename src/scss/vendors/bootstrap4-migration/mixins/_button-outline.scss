@@ -1,0 +1,57 @@
+
+// Backport from Bootstrap 4
+@mixin button-outline-variant($color, $color-hover: #fff) {
+    $focus-color:       rgba($color, .3);
+        
+    color: $color;
+    background-image: none;
+    background-color: white; // transparent is better?
+    border-color: $color;
+  
+    &:hover {
+      color: $color-hover;
+      background-color: $color;
+          border-color: $color;
+    }
+  
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: $color-hover; 
+          border-color: $color;
+      box-shadow: 0 0 0 $input-btn-focus-width $focus-color;
+      outline: 0;
+      &:hover {
+        color: $color-hover;
+        background-color: $color; 
+      }
+    }
+  
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle { 
+      color: $color-hover;
+      background-color: $color; 
+      border-color: $color;
+      
+      &:hover,
+      &:focus,
+      &.focus {
+        color: $color-hover;
+        background-color: darken($color, 5%);
+            border-color: darken($color, 5%);
+      }
+    }
+  
+    &.disabled,
+    &:disabled {
+      &:focus,
+      &.focus {
+        border-color: lighten($color, 20%);
+      }
+      &:hover {
+        border-color: lighten($color, 20%);
+      }
+    }
+  }
+  

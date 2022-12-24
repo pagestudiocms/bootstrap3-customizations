@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>CSS Bootstrap</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&amp;display=swap" rel="stylesheet"
+        type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Crimson+Text&amp;display=swap:400,700,500,400italic,500italic,700italic"
+        rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="https://cdn.pagestudiocms.com/assets/vendors/bootstrap-offcanvas/css/bootstrap.offcanvas.min.css">
+    <link rel="stylesheet" href="../build/assets/css/bootstrap-custom.css">
+    <!-- <link rel="stylesheet" href="../build/assets/css/bootstrap-theme.css"> -->
+    <link rel="stylesheet" href="../build/assets/css/docs.min.css">
+
+    <script type="text/javascript"
+        src="https://cdn.pagestudiocms.com/assets/vendors/modernizr/modernizr-2.6.2.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="bootstrap-offcanvas bs-docs-home">
+
+    <!-- <div class="page-loader"></div> -->
+
+    <div id="page" class="site-container">
+
+        <nav id="primary-nav" class="navbar navbar-default navbar-fixed-top" role="navigation" data-content-field="header-content"
+    data-navbar-type="offcanvas">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">
+                <!-- <img src="images/logo.png" class="site-logo-image" alt="Circle Studio"> -->
+                <!-- <span class="hidden site-slogan"></span> -->
+                <span>Bootstrap 3</span> Custom
+            </a>
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-overlay-one" data-target-original="example-overlay-one"> -->
+            <button type="button" class="navbar-toggle offcanvas-toggle js-offcanvas-has-events"
+                data-toggle="offcanvas" data-target="#example-offcanvas-three"
+                data-target-original="#example-offcanvas-three">
+                <span class="sr-only">Toggle navigation</span>
+                <span>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-offcanvas navbar-offcanvas-touch offcanvas-transform js-offcanvas-done"
+            id="example-offcanvas-three">
+            <!-- <div class="collapse navbar-collapse" id="example-overlay-one"> -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="first"><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li class="last"><a href="components-old.html">Old Components</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+{% include nav/main.html %}
+
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>CSS</h1>
+        <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+    <div class="row">
+        <div class="col-md-9" role="main">
+
+            <div class="bs-docs-section">
+    <h1 id="overview" class="page-header">Overview</h1>
+  
+    <p class="lead">Get the lowdown on the key pieces of Bootstrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+  
+    <h2 id="overview-doctype">HTML5 doctype</h2>
+    <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+  {% highlight html %}
+  <!doctype html>
+  <html lang="en">
+    ...
+  </html>
+  {% endhighlight %}
+  
+    <h2 id="overview-mobile">Mobile first</h2>
+    <p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p>
+    <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your <code>&lt;head&gt;</code>.</p>
+  {% highlight html %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% endhighlight %}
+    <p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p>
+  {% highlight html %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  {% endhighlight %}
+  
+    <h2 id="overview-type-links">Typography and links</h2>
+    <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+    <ul>
+      <li>Set <code>background-color: #fff;</code> on the <code>body</code></li>
+      <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
+      <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
+    </ul>
+    <p>These styles can be found within <code>scaffolding.less</code>.</p>
+  
+    <h2 id="overview-normalize">Normalize.css</h2>
+    <p>For improved cross-browser rendering, we use <a href="https://necolas.github.io/normalize.css/" rel="noopener" target="_blank">Normalize.css</a>, a project by <a href="https://twitter.com/necolas" rel="noopener" target="_blank">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal" rel="noopener" target="_blank">Jonathan Neal</a>.</p>
+  
+    <h2 id="overview-container">Containers</h2>
+    <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p>
+    <p>Use <code>.container</code> for a responsive fixed width container.</p>
+  {% highlight html %}
+  <div class="container">
+    ...
+  </div>
+  {% endhighlight %}
+    <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+  {% highlight html %}
+  <div class="container-fluid">
+    ...
+  </div>
+  {% endhighlight %}
+  </div>
+
+        </div>
+        <!-- {% unless page.fullwidth == true %} -->
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <form class="bs-docs-search">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search..."
+                        aria-label="Search for..." autocomplete="off">
+                </form>
+
+                <ul class="nav bs-docs-sidenav">
+                    <li>
+    <a href="#overview">Overview</a>
+    <ul class="nav">
+      <li><a href="#overview-doctype">HTML5 doctype</a></li>
+      <li><a href="#overview-mobile">Mobile first</a></li>
+      <li><a href="#overview-type-links">Typography and links</a></li>
+      <li><a href="#overview-normalize">Normalize.css</a></li>
+      <li><a href="#overview-container">Containers</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#grid">Grid system</a>
+    <ul class="nav">
+      <li><a href="#grid-intro">Introduction</a></li>
+      <li><a href="#grid-media-queries">Media queries</a></li>
+      <li><a href="#grid-options">Grid options</a></li>
+      <li><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li>
+      <li><a href="#grid-example-fluid">Ex: Fluid container</a></li>
+      <li><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li>
+      <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
+      <li><a href="#grid-example-wrapping">Ex: Column wrapping</a></li>
+      <li><a href="#grid-responsive-resets">Responsive column resets</a></li>
+      <li><a href="#grid-remove-gutters">Remove gutters</a></li>
+      <li><a href="#grid-offsetting">Offsetting columns</a></li>
+      <li><a href="#grid-nesting">Nesting columns</a></li>
+      <li><a href="#grid-column-ordering">Column ordering</a></li>
+      <li><a href="#grid-less">Less mixins and variables</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#type">Typography</a>
+    <ul class="nav">
+      <li><a href="#type-headings">Headings</a></li>
+      <li><a href="#type-body-copy">Body copy</a></li>
+      <li><a href="#type-inline-text">Inline text elements</a></li>
+      <li><a href="#type-alignment">Alignment classes</a></li>
+      <li><a href="#type-transformation">Transformation classes</a></li>
+      <li><a href="#type-abbreviations">Abbreviations</a></li>
+      <li><a href="#type-addresses">Addresses</a></li>
+      <li><a href="#type-blockquotes">Blockquotes</a></li>
+      <li><a href="#type-lists">Lists</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#code">Code</a>
+    <ul class="nav">
+      <li><a href="#code-inline">Inline</a></li>
+      <li><a href="#code-user-input">User input</a></li>
+      <li><a href="#code-block">Basic block</a></li>
+      <li><a href="#code-variables">Variables</a></li>
+      <li><a href="#code-sample-output">Sample output</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#tables">Tables</a>
+    <ul class="nav">
+      <li><a href="#tables-example">Basic example</a></li>
+      <li><a href="#tables-striped">Striped rows</a></li>
+      <li><a href="#tables-bordered">Bordered table</a></li>
+      <li><a href="#tables-hover-rows">Hover rows</a></li>
+      <li><a href="#tables-condensed">Condensed table</a></li>
+      <li><a href="#tables-contextual-classes">Contextual classes</a></li>
+      <li><a href="#tables-responsive">Responsive tables</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#forms">Forms</a>
+    <ul class="nav">
+      <li><a href="#forms-example">Basic example</a></li>
+      <li><a href="#forms-inline">Inline form</a></li>
+      <li><a href="#forms-horizontal">Horizontal form</a></li>
+      <li><a href="#forms-controls">Supported controls</a></li>
+      <li><a href="#forms-controls-static">Static control</a></li>
+      <li><a href="#forms-control-focus">Focus state</a></li>
+      <li><a href="#forms-control-disabled">Disabled state</a></li>
+      <li><a href="#forms-control-readonly">Readonly state</a></li>
+      <li><a href="#forms-help-text">Help text</a></li>
+      <li><a href="#forms-control-validation">Validation states</a></li>
+      <li><a href="#forms-control-sizes">Control sizing</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#buttons">Buttons</a>
+    <ul class="nav">
+      <li><a href="#buttons-tags">Button tags</a></li>
+      <li><a href="#buttons-options">Options</a></li>
+      <li><a href="#buttons-sizes">Sizes</a></li>
+      <li><a href="#buttons-active">Active state</a></li>
+      <li><a href="#buttons-disabled">Disabled state</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#images">Images</a>
+    <ul class="nav">
+      <li><a href="#images-responsive">Responsive images</a></li>
+      <li><a href="#images-shapes">Image shapes</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#helper-classes">Helper classes</a>
+    <ul class="nav">
+      <li><a href="#helper-classes-colors">Contextual colors</a></li>
+      <li><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li>
+      <li><a href="#helper-classes-close">Close icon</a></li>
+      <li><a href="#helper-classes-carets">Carets</a></li>
+      <li><a href="#helper-classes-floats">Quick floats</a></li>
+      <li><a href="#helper-classes-center">Center content blocks</a></li>
+      <li><a href="#helper-classes-clearfix">Clearfix</a></li>
+      <li><a href="#helper-classes-show-hide">Showing and hiding content</a></li>
+      <li><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li>
+      <li><a href="#helper-classes-image-replacement">Image replacement</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#responsive-utilities">Responsive utilities</a>
+    <ul class="nav">
+      <li><a href="#responsive-utilities-classes">Available classes</a></li>
+      <li><a href="#responsive-utilities-print">Print classes</a></li>
+      <li><a href="#responsive-utilities-tests">Test cases</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#less">Using Less</a>
+    <ul class="nav">
+      <li><a href="#less-bootstrap">Compiling Bootstrap</a></li>
+      <li><a href="#less-variables">Variables</a></li>
+      <li><a href="#less-mixins-vendor">Vendor mixins</a></li>
+      <li><a href="#less-mixins-utility">Utility mixins</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#sass">Using Sass</a>
+    <ul class="nav">
+      <li><a href="#sass-contents">What's included</a></li>
+      <li><a href="#sass-installation">Installation</a></li>
+    </ul>
+  </li>
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
+        <!-- {% endunless %} -->
+    </div>
+</div>
+
+<!-- </div> -->
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer">
+    <div class="container">
+  
+      <ul class="bs-docs-footer-links">
+        <li><a href="{{ site.repo }}">GitHub</a></li>
+        <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+        <li><a href="{{ site.baseurl }}/getting-started/#examples">Examples</a></li>
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+      </ul>
+  
+      <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" rel="noopener" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" rel="noopener" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+  
+      <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" rel="license noopener" target="_blank">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" rel="license noopener" target="_blank">CC BY 3.0</a>.</p>
+  
+    </div>
+</footer>
+
+<!-- JavaScript
+================================================================= -->
+
+<script src="http://cdn.pagestudiocms.com/assets/vendors/jquery/jquery-1.12.1.min.js"></script>
+<script src="http://cdn.pagestudiocms.com/assets/vendors/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- <script src="http://cdn.pagestudiocms.com/assets/vendors/bootstrap-offcanvas/js/bootstrap.offcanvas.min.js"></script> -->
+<script src="../../build/assets/js/docs.min.js"></script>
+<script src="../../build/assets/js/application.js"></script>
+<!-- jQuery Easing -->
+<!-- <script src="../../assets/js/jquery.easing.1.3.js"></script> -->
+
+<script src="http://cdn.pagestudiocms.com/assets/vendors/stellar/0.6.2/jquery.stellar.min.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/checkbox.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/radio.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/bootstrap-switch.js"></script>
+<script src="http://pagestudiocms.com/assets/js/plugins/switch.js"></script>
+<script type="text/javascript" src="../build/assets/js/site.js"></script>
+<!-- <script src="src/js/main.js" type="module"></script> -->
+
+</body>
+
+</html>

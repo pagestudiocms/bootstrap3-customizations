@@ -1,0 +1,43 @@
+${require('./_header.html') title="CSS Bootstrap" 
+    navbar="navbar-default navbar-fixed-top" 
+    body-class="bs-docs-home"
+}
+
+{% include nav/main.html %}
+
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>CSS</h1>
+        <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+    <div class="row">
+        <div class="col-md-9" role="main">
+
+            ${require('./_partials/css/_overview.html')}
+
+        </div>
+        <!-- {% unless page.fullwidth == true %} -->
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <form class="bs-docs-search">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search..."
+                        aria-label="Search for..." autocomplete="off">
+                </form>
+
+                <ul class="nav bs-docs-sidenav">
+                    ${require('./_partials/css/_sidenav.html')}
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
+        <!-- {% endunless %} -->
+    </div>
+</div>
+
+${require('./_footer.html')}

@@ -1,0 +1,34 @@
+<nav id="primary-nav" class="navbar ${props.navbar}" role="navigation" data-content-field="header-content"
+    data-navbar-type="offcanvas">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">
+                <!-- <img src="images/logo.png" class="site-logo-image" alt="Circle Studio"> -->
+                <!-- <span class="hidden site-slogan"></span> -->
+                <span>Bootstrap 3</span> Custom
+            </a>
+            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-overlay-one" data-target-original="example-overlay-one"> -->
+            <button type="button" class="navbar-toggle offcanvas-toggle js-offcanvas-has-events"
+                data-toggle="offcanvas" data-target="#example-offcanvas-three"
+                data-target-original="#example-offcanvas-three">
+                <span class="sr-only">Toggle navigation</span>
+                <span>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-offcanvas navbar-offcanvas-touch offcanvas-transform js-offcanvas-done"
+            id="example-offcanvas-three">
+            <!-- <div class="collapse navbar-collapse" id="example-overlay-one"> -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="first"><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li class="last"><a href="components-old.html">Old Components</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
