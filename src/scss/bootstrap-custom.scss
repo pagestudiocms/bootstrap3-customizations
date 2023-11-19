@@ -32,7 +32,7 @@
 @import "components/base";
 
 // Page sections - header, sidebar, footer. May use components defined under components
-// @import "layout/base";
+@import "layout/base"; 
 
 // @import "pages/base";
 
@@ -87,75 +87,6 @@
 .rotate {
   @include transform(rotate(-90deg));
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);  // Internet Explorer
-}
-
-.bg-white {
-  background: #ffffff;
-  background-color: #ffffff;
-}
-.bg-grey {
-  background: #FCFCFC;
-  background-color: #FCFCFC;
-}
-
-.body-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: rgba(#CCC, .5);
-  zoom: 1;
-}
-
-.gototop {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 999;
-	opacity: 0;
-	visibility: hidden;
-	@include transition(.5s);
-	&.active {
-		opacity: 1;
-		visibility: visible;
-	}
-	a {
-		width: 50px;
-		height: 50px;
-		display: table;
-		background: rgba(0,0,0,.5);
-		color: #FFF;
-		text-align: center;
-		@include border-radius(4px);
-		i {
-			height: 50px;
-			display: table-cell;
-			vertical-align: middle;
-
-		}
-		&:hover, &:active, &:focus {
-			text-decoration: none;
-			outline: none;
-		}
-	}	
-}
-
-.fh5co-loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(../../../assets/img/loader.gif) center no-repeat #fff;
-}
-
-.animate-box {
-	.js & {
-		opacity: 0;
-	}
 }
 
 // Mainly used in debugging and troubleshooting 

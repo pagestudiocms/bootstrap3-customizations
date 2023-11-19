@@ -1,25 +1,12 @@
-.content-overlay { 
-	position: absolute !important;
-	width: 100%;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
-	background: rgba(48,56,65,.35);
-}
 
-.page-loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(../img/loader.gif) center no-repeat #fff;
-} 
+// Porting Bootstrap 4 utilities into Bootstrap 3
+// https://getbootstrap.com/docs/4.6/utilities/flex/#align-items
 
-.bg-inverse {
-	background: $inverse-base-color !important;
-	background-color: $inverse-base-color !important;
-}
+@import "../vendors/bootstrap4/mixins/breakpoints";
+// @import "../vendors/bootstrap4/mixins/grid";
+// @import "../vendors/bootstrap4/mixins/grid-framework";
+
+@import "../vendors/bootstrap4/utilities/align";
+@import "../vendors/bootstrap4/utilities/display";
+@import "../vendors/bootstrap4/utilities/flex";
+// @import "../vendors/bootstrap4/utilities/spacing"; 
